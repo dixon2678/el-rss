@@ -11,7 +11,7 @@ app = Flask(__name__)
 @app.route("/")
 def el_job():
     el = extractLoad()
-    df = el.fetch_api()
+    df = el.rss_to_df("https://cointelegraph.com/rss")
     final_df = el.add_datetime(df)
     el.load_bigquery(final_df)
     return "Job complete"
