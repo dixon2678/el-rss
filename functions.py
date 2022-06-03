@@ -16,19 +16,20 @@ class extractLoad:
     # Fetch prices from Binance API
 
     """
-    Fetches all information on every available pairs on Binance 
-    (cryptocurrency trading platform) as json
-    Converts to DataFrame with pandas built-in read_json
-
-    Input : None
-    Output : DataFrame
+    WIP
     """
 
-    def fetch_api(self):
-        r = requests.get("https://api.binance.com/api/v3/ticker/24hr")
-        r_json = r.json()
-        df = pd.read_json("https://api.binance.com/api/v3/ticker/24hr")
-        return df
+    def rss_to_df(rss):
+      NewsFeed = feedparser.parse(rss)
+      list_of_en = []
+      for en in NewsFeed.entries:
+        en_l = []
+        en_l.append(en.title)
+        en_l.append(en.published)
+        list_of_en.append(en_l)
+      rss_df = pd.DataFrame(list_of_en, columns = ['title', 'date'])
+      return rss_df
+    
     
     # Add datetime column - Minor Transformation
 
