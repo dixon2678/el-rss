@@ -2,6 +2,7 @@ import requests
 import pandas as pd
 import os
 import json
+import feedparser
 from datetime import datetime
 from google.cloud import bigquery
 from google.oauth2 import service_account
