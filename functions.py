@@ -19,7 +19,7 @@ class extractLoad:
     WIP
     """
 
-    def rss_to_df(rss):
+    def rss_to_df(self, rss):
       NewsFeed = feedparser.parse(rss)
       list_of_en = []
       for en in NewsFeed.entries:
