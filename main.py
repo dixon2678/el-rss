@@ -1,6 +1,7 @@
 import requests
 import pandas as pd
 import os
+import feedparser
 from functions import extractLoad
 from datetime import datetime
 from google.cloud import bigquery
