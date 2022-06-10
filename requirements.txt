@@ -21,6 +21,7 @@ decorator==5.1.0
 defusedxml==0.7.1
 entrypoints==0.3
 Flask==2.1.0
+feedparser
 gunicorn==20.1.0
 great-expectations==0.13.44
 gcsfs
