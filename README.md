@@ -1,2 +1,2 @@
-# binanceapi-el
-Simple EL script from Binance prices API to Google BigQuery
+# el-rss
+EL from CoinTelegraph RSS feed to BigQuery table
